@@ -7,18 +7,18 @@ public class Main {
         int tempScore=0;
 
         if (isTie(pointsPlayer1, pointsPlayer2)) {
-            score = getTieScores(pointsPlayer1);
+            return  getTieScores(pointsPlayer1);
         }
         else if (isAdvantajeOrWin(pointsPlayer1, pointsPlayer2))
         {
-            score = getAdvantajeOrWinScores(pointsPlayer1, pointsPlayer2);
+            return  getAdvantajeOrWinScores(pointsPlayer1, pointsPlayer2);
         }
         else
         {
-            score = getRegularScores(pointsPlayer1, pointsPlayer2, score);
+            return  getRegularScores(pointsPlayer1, pointsPlayer2, score);
 
         }
-    return score;
+
     }
 
     private static String getRegularScores(int pointsPlayer1, int pointsPlayer2, String score) {
