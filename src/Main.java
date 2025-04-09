@@ -11,11 +11,7 @@ public class Main {
         }
         else if (isAdvantajeOrWin(pointsPlayer1, pointsPlayer2))
         {
-            int minusResult = pointsPlayer1-pointsPlayer2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
+            score = getAdvantajeOrWinScores(pointsPlayer1, pointsPlayer2);
         }
         else
         {
@@ -42,6 +38,16 @@ public class Main {
 
         }
     return score;
+    }
+
+    private static String getAdvantajeOrWinScores(int pointsPlayer1, int pointsPlayer2) {
+        String score;
+        int minusResult = pointsPlayer1 - pointsPlayer2;
+        if (minusResult==1) score ="Advantage player1";
+        else if (minusResult ==-1) score ="Advantage player2";
+        else if (minusResult>=2) score = "Win for player1";
+        else score ="Win for player2";
+        return score;
     }
 
     private static boolean isAdvantajeOrWin(int pointsPlayer1, int pointsPlayer2) {
