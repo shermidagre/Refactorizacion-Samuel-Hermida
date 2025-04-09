@@ -292,3 +292,5 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 * Refactorizacion del metodo istie
 
 * Refactorizacion del metoddo isTieScores
+
+* Refactorizacion del metodo isAdvantageOrWin

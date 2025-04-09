@@ -9,7 +9,7 @@ public class Main {
         if (isTie(pointsPlayer1, pointsPlayer2)) {
             score = getTieScores(pointsPlayer1);
         }
-        else if (pointsPlayer1 >=4 || pointsPlayer2 >=4)
+        else if (isAdvantajeOrWin(pointsPlayer1, pointsPlayer2))
         {
             int minusResult = pointsPlayer1-pointsPlayer2;
             if (minusResult==1) score ="Advantage player1";
@@ -42,6 +42,10 @@ public class Main {
 
         }
     return score;
+    }
+
+    private static boolean isAdvantajeOrWin(int pointsPlayer1, int pointsPlayer2) {
+        return pointsPlayer1 >= 4 || pointsPlayer2 >= 4;
     }
 
     private static String getTieScores(int pointsPlayer1) {
