@@ -302,3 +302,5 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 * Cambio variable score por return
 
 * Removemos score y tempScore
+
+* Removemos score de getTieScores
