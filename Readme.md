@@ -300,3 +300,5 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 * Refactorizacion del metodo getRegularScores
 
 * Cambio variable score por return
+
+* Removemos score y tempScore

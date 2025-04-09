@@ -4,7 +4,6 @@ public class Main {
      */
     public static String getScore(int pointsPlayer1, int pointsPlayer2) {
         String score = "";
-        int tempScore=0;
 
         if (isTie(pointsPlayer1, pointsPlayer2)) {
             return  getTieScores(pointsPlayer1);
@@ -15,7 +14,7 @@ public class Main {
         }
         else
         {
-            return  getRegularScores(pointsPlayer1, pointsPlayer2, score);
+            return  getRegularScores(pointsPlayer1, pointsPlayer2);
 
         }
 
