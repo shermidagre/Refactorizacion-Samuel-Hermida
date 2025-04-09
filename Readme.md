@@ -310,3 +310,9 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 * Substituimos switch por array en getScores
 
 * Substituimos switch por array en getRegularScores
+
+* Cambios varios que le dan a la pava en su momento de iluminacion
+
+* Extraccion del isWin
+
+* Extraccion del getWinScores

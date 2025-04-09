@@ -1,52 +1,96 @@
 public class Main {
+
     /**
+
      * metodo para devolver la puntuacion de tenis
+
      */
+
     public static String getScore(int pointsPlayer1, int pointsPlayer2) {
-        String score = "";
+
+
 
         if (isTie(pointsPlayer1, pointsPlayer2)) {
-            return  getTieScores(pointsPlayer1);
-        }
-        else if (isAdvantajeOrWin(pointsPlayer1, pointsPlayer2))
-        {
-            return  getAdvantajeOrWinScores(pointsPlayer1, pointsPlayer2);
-        }
-        else
-        {
-            return  getRegularScores(pointsPlayer1, pointsPlayer2);
+
+            return getTieScores(pointsPlayer1);
 
         }
+
+
+        else if (isAdvantage(pointsPlayer1, pointsPlayer2))
+
+        {
+            int minusResult = pointsPlayer1 - pointsPlayer2;
+
+            if (minusResult==1) return "Advantage player1";
+
+            else return "Advantage player2";
+
+        }
+
+        else if (isWin(pointsPlayer1, pointsPlayer2))
+
+        {
+            return getWinScores(pointsPlayer1, pointsPlayer2);
+
+        }
+
+        else
+
+        {
+            return getRegularScores(pointsPlayer1, pointsPlayer2);
+
+        }
+    }
+
+    private static String getWinScores(int pointsPlayer1, int pointsPlayer2) {
+        String score;
+
+        int minusResult = pointsPlayer1 - pointsPlayer2;
+
+        if (minusResult>=2) score = "Win for player1";
+
+        else score ="Win for player2";
+
+        return score;
+    }
+
+    private static boolean isWin(int pointsPlayer1, int pointsPlayer2) {
+
+
+        return pointsPlayer1 >= 4 || pointsPlayer2 >= 4;
+
 
     }
 
+
+
+
+    private static String getAdvantageScores(int pointsPlayer1, int pointsPlayer2) {
+
+        int minusResult = pointsPlayer1 - pointsPlayer2;
+
+        if (minusResult==1) return "Advantage player1";
+
+        else return "Advantage player2";
+
+    }
+    private static boolean isAdvantage(int pointsPlayer1, int pointsPlayer2) {
+
+
+
+        return (pointsPlayer1 >= 4 || pointsPlayer2 >= 4) && (pointsPlayer1 - pointsPlayer2 == 1 || pointsPlayer1 - pointsPlayer2 == -1);
+
+
+    }
+
+
+
     private static String getRegularScores(int pointsPlayer1, int pointsPlayer2) {
-        String score="";
-        int tempScore;
 
         String[] regularScores = {"Love","Fifteen","Thirty","Forty"};
 
-        for (int i = 1; i<3; i++)
-        {
-            if (i==1) tempScore = pointsPlayer1;
-            else { score +="-"; tempScore = pointsPlayer2;}
-            score += regularScores[tempScore];
-        }
-        return score;
-    }
-
-    private static String getAdvantajeOrWinScores(int pointsPlayer1, int pointsPlayer2) {
-        String score;
-        int minusResult = pointsPlayer1 - pointsPlayer2;
-        if (minusResult==1) score ="Advantage player1";
-        else if (minusResult ==-1) score ="Advantage player2";
-        else if (minusResult>=2) score = "Win for player1";
-        else score ="Win for player2";
-        return score;
-    }
-
-    private static boolean isAdvantajeOrWin(int pointsPlayer1, int pointsPlayer2) {
-        return pointsPlayer1 >= 4 || pointsPlayer2 >= 4;
+        return regularScores [pointsPlayer1] + '-' + regularScores[pointsPlayer2];
     }
 
     private static String getTieScores(int pointsPlayers) {
