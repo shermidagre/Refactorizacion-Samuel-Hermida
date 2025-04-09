@@ -44,15 +44,13 @@ public class Main {
     }
 
     private static String getWinScores(int pointsPlayer1, int pointsPlayer2) {
-        String score;
 
         int minusResult = pointsPlayer1 - pointsPlayer2;
 
-        if (minusResult>=2) score = "Win for player1";
+        if (minusResult>=2) return "Win for player1";
 
-        else score ="Win for player2";
+        else return "Win for player2";
 
-        return score;
     }
 
     private static boolean isWin(int pointsPlayer1, int pointsPlayer2) {
