@@ -288,3 +288,5 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 # Pasos de nuestra refactorizacion
 
 * Refactorizacion del nombre de las variables
+
+* Refactorizacion del metoddo istie
