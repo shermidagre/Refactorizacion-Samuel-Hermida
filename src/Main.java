@@ -7,25 +7,7 @@ public class Main {
         int tempScore=0;
 
         if (isTie(pointsPlayer1, pointsPlayer2)) {
-            switch (pointsPlayer1)
-            {
-                case 0:
-                    score = "Love-All";
-                    break;
-                case 1:
-                    score = "Fifteen-All";
-                    break;
-                case 2:
-                    score = "Thirty-All";
-                    break;
-                case 3:
-                    score = "Forty-All";
-                    break;
-                default:
-                    score = "Deuce";
-                    break;
-
-            }
+            score = getTieScores(pointsPlayer1);
         }
         else if (pointsPlayer1 >=4 || pointsPlayer2 >=4)
         {
@@ -60,6 +42,30 @@ public class Main {
 
         }
     return score;
+    }
+
+    private static String getTieScores(int pointsPlayer1) {
+        String score;
+        switch (pointsPlayer1)
+        {
+            case 0:
+                score = "Love-All";
+                break;
+            case 1:
+                score = "Fifteen-All";
+                break;
+            case 2:
+                score = "Thirty-All";
+                break;
+            case 3:
+                score = "Forty-All";
+                break;
+            default:
+                score = "Deuce";
+                break;
+
+        }
+        return score;
     }
 
     private static boolean isTie(int pointsPlayer1, int pointsPlayer2) {

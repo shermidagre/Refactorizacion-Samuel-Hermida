@@ -289,4 +289,6 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 
 * Refactorizacion del nombre de las variables
 
-* Refactorizacion del metoddo istie
+* Refactorizacion del metodo istie
+
+* Refactorizacion del metoddo isTieScores
