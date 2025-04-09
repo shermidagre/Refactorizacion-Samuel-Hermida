@@ -307,4 +307,6 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 
 * Renombramos variable pointsPlayer1 en getTieScores
 
-* Substituimos switch por array
+* Substituimos switch por array en getScores
+
+* Substituimos switch por array en getRegularScores
