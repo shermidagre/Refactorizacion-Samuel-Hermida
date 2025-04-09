@@ -296,3 +296,5 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 * Refactorizacion del metodo isAdvantageOrWin
 
 * Refactorizacion del metodo getAdvantajeOrWinScores
+
+Refactorizacion del metodo getRegularScores
