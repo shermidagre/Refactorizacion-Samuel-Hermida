@@ -316,3 +316,5 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 * Extraccion del isWin
 
 * Extraccion del getWinScores
+* 
+* Cambia los if y else de los metodos getAdvantageScores y getWinScores

@@ -43,21 +43,20 @@ public class Main {
         }
     }
 
+    private static String winnigPlayer(int pointsPlayer1, int pointsPlayer2){
+
+        return pointsPlayer1>pointsPlayer2 ? "player1" : "player2";
+
+    }
+
     private static String getWinScores(int pointsPlayer1, int pointsPlayer2) {
 
-        int minusResult = pointsPlayer1 - pointsPlayer2;
-
-        if (minusResult>=2) return "Win for player1";
-
-        else return "Win for player2";
-
+        return "Win for "+winnigPlayer(pointsPlayer1,pointsPlayer2);
     }
 
     private static boolean isWin(int pointsPlayer1, int pointsPlayer2) {
 
-
         return pointsPlayer1 >= 4 || pointsPlayer2 >= 4;
-
 
     }
 
@@ -66,11 +65,7 @@ public class Main {
 
     private static String getAdvantageScores(int pointsPlayer1, int pointsPlayer2) {
 
-        int minusResult = pointsPlayer1 - pointsPlayer2;
-
-        if (minusResult==1) return "Advantage player1";
-
-        else return "Advantage player2";
+        return "Advantage "+winnigPlayer(pointsPlayer1,pointsPlayer2);
 
     }
     private static boolean isAdvantage(int pointsPlayer1, int pointsPlayer2) {
