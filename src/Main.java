@@ -62,20 +62,14 @@ public class Main {
     }
 
     private static String getTieScores(int pointsPlayers) {
-        switch (pointsPlayers)
-        {
-            case 0:
-                return "Love-All";
-            case 1:
-                return   "Fifteen-All";
-            case 2:
-                return "Thirty-All";
-            case 3:
-                return  "Forty-All";
-            default:
-                return  "Deuce";
 
-        }
+        String[] tieScores ={"Love-All","Fifteen-All","Thirty-All","Forty-All"};
+
+
+        if (pointsPlayers>=0 && pointsPlayers<=3) return tieScores[pointsPlayers];
+
+
+        return  "Deuce";
     }
 
     private static boolean isTie(int pointsPlayer1, int pointsPlayer2) {

@@ -304,3 +304,7 @@ Podemos seleccionar diferentes elementos para mostrar su men√∫ de refactorizaci√
 * Removemos score y tempScore
 
 * Removemos score de getTieScores
+
+* Renombramos variable pointsPlayer1 en getTieScores
+
+* Substituimos switch por array
