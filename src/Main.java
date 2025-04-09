@@ -21,8 +21,10 @@ public class Main {
 
     }
 
-    private static String getRegularScores(int pointsPlayer1, int pointsPlayer2, String score) {
+    private static String getRegularScores(int pointsPlayer1, int pointsPlayer2) {
+        String score="";
         int tempScore;
+
         for (int i = 1; i<3; i++)
         {
             if (i==1) tempScore = pointsPlayer1;
