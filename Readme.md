@@ -284,3 +284,7 @@ Podemos seleccionar diferentes elementos para mostrar su menú de refactorizaci�
 
 ----
 <sub>[(*artículo original*)](https://entornos.abrilcode.com/doku.php?id=apuntes:refactorizacion)</sub>
+
+# Pasos de nuestra refactorizacion
+
+* Refactorizacion del nombre de las variables
